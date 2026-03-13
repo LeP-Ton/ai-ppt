@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 分享前端 PPT 初版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/libs/poem-text-animator/animations.css" />
+  </head>
+  <body>
+    <div class="bg-shapes" aria-hidden="true">
+      <span class="shape shape-a"></span>
+      <span class="shape shape-b"></span>
+      <span class="shape shape-c"></span>
+    </div>
+
+    <header class="topbar">
+      <div class="deck-meta">
+        <p class="deck-kicker">AI Sharing Deck v0.1</p>
+        <h1>让团队 30 分钟理解 AI 分享怎么做</h1>
+      </div>
+      <div class="control-group">
+        <button id="prevBtn" class="btn">上一页</button>
+        <button id="nextBtn" class="btn btn-primary">下一页</button>
+        <button id="autoplayBtn" class="btn">自动播放：关</button>
+      </div>
+    </header>
+
+    <main class="deck-layout">
+      <aside class="outline-panel" aria-label="PPT 目录">
+        <h2>目录导航</h2>
+        <ol id="outlineList"></ol>
+        <div class="tips">
+          <p>快捷键</p>
+          <p>←/→ 翻页 · Home/End 跳转 · P 自动播放 · N 演讲备注</p>
+        </div>
+      </aside>
+
+      <section class="slides-stage" id="slidesStage" aria-live="polite">
+        <article class="slide is-active" data-title="开场：为什么是现在" data-note="建议先讲业务压力，再讲机会窗口。">
+          <p class="slide-tag reveal">01 开场</p>
+          <h2 class="slide-title">为什么今天必须把 AI 分享做成团队共识</h2>
+          <p class="lead reveal">
+            分享目标不是“讲技术热词”，而是帮助产品、研发、运营在同一套价值语言里协作。
+          </p>
+          <div class="metric-grid reveal">
+            <div>
+              <p class="metric-value">30 分钟</p>
+              <p class="metric-label">完成一次高质量分享</p>
+            </div>
+            <div>
+              <p class="metric-value">8 页</p>
+              <p class="metric-label">覆盖共识所需核心信息</p>
+            </div>
+            <div>
+              <p class="metric-value">3 层</p>
+              <p class="metric-label">战略、场景、执行</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="趋势：AI 价值窗口" data-note="用公司内部数据替换示例数字会更有说服力。">
+          <p class="slide-tag reveal">02 趋势</p>
+          <h2 class="slide-title">AI 价值窗口：降本、提效、增收同时发生</h2>
+          <div class="dual-column reveal">
+            <div class="card">
+              <h3>外部环境变化</h3>
+              <ul>
+                <li>多模态模型推理成本持续下降</li>
+                <li>通用 Agent 工具链快速成熟</li>
+                <li>用户对智能体验的预期显著提高</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>内部行动理由</h3>
+              <ul>
+                <li>流程中重复劳动占比高，自动化收益明确</li>
+                <li>已有数据资产，但复用效率偏低</li>
+                <li>需要统一方法，避免零散试错</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="能力：AI 分享内容地图" data-note="这里可以结合团队角色做内容取舍。">
+          <p class="slide-tag reveal">03 能力</p>
+          <h2 class="slide-title">一场 AI 分享，建议覆盖这 4 个能力象限</h2>
+          <div class="quad-grid reveal">
+            <div class="quad-item">
+              <h3>模型认知</h3>
+              <p>模型能做什么、不能做什么，边界要先讲清。</p>
+            </div>
+            <div class="quad-item">
+              <h3>Prompt 设计</h3>
+              <p>输入结构化，输出才能稳定可复用。</p>
+            </div>
+            <div class="quad-item">
+              <h3>业务落地</h3>
+              <p>把“酷炫演示”转换为“可衡量结果”。</p>
+            </div>
+            <div class="quad-item">
+              <h3>风险治理</h3>
+              <p>质量、合规、数据安全必须同步设计。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="框架：一页讲清选题" data-note="优先展示 1 个高频场景的切入方式。">
+          <p class="slide-tag reveal">04 选题</p>
+          <h2 class="slide-title">用“问题-方案-收益”结构快速定义一个分享主题</h2>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <p class="timeline-title">问题定义</p>
+              <p>目标用户是谁？当前损失在哪里？</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-title">方案设计</p>
+              <p>模型、工具、流程如何组合？</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-title">收益验证</p>
+              <p>上线前后用哪些指标对比？</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-title">推广路径</p>
+              <p>如何复制到第二个、第三个场景？</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="Demo：现场演示结构" data-note="演示环节建议控制在 8 分钟内。">
+          <p class="slide-tag reveal">05 Demo</p>
+          <h2 class="slide-title">一次高可用 Demo，建议包含 3 段式叙事</h2>
+          <div class="dual-column reveal">
+            <div class="card card-strong">
+              <h3>Before</h3>
+              <p>展示旧流程：手工、重复、延迟高。</p>
+            </div>
+            <div class="card card-strong">
+              <h3>After</h3>
+              <p>展示新流程：AI 辅助 + 人工复核。</p>
+            </div>
+          </div>
+          <div class="callout reveal">
+            <p>关键不是“模型有多强”，而是“团队今天就能用起来”。</p>
+          </div>
+        </article>
+
+        <article class="slide" data-title="执行：90 天落地节奏" data-note="可以把甘特图替换成你们真实排期。">
+          <p class="slide-tag reveal">06 执行</p>
+          <h2 class="slide-title">建议执行节奏：先试点，再标准化，再规模化</h2>
+          <div class="phase-grid reveal">
+            <div class="phase-card">
+              <p class="phase-name">第 1-3 周</p>
+              <p class="phase-title">场景试点</p>
+              <p>确定单一高价值场景，完成闭环验证。</p>
+            </div>
+            <div class="phase-card">
+              <p class="phase-name">第 4-8 周</p>
+              <p class="phase-title">流程标准化</p>
+              <p>固化提示词模板与评估清单。</p>
+            </div>
+            <div class="phase-card">
+              <p class="phase-name">第 9-12 周</p>
+              <p class="phase-title">规模复制</p>
+              <p>跨团队复制并建立运营指标看板。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="风险：上线前检查" data-note="建议把合规同学加入评审流程。">
+          <p class="slide-tag reveal">07 风险</p>
+          <h2 class="slide-title">上线前至少完成这 4 类检查</h2>
+          <div class="checklist reveal">
+            <p><span>质量稳定性</span> 输出一致性、幻觉率、失败回退。</p>
+            <p><span>数据安全</span> 脱敏策略、权限边界、日志审计。</p>
+            <p><span>合规要求</span> 版权、隐私、行业监管要求。</p>
+            <p><span>组织协同</span> 责任分工、人工兜底、反馈机制。</p>
+          </div>
+        </article>
+
+        <article class="slide" data-title="收尾：行动清单" data-note="结尾需要明确 owner 和截止时间。">
+          <p class="slide-tag reveal">08 行动</p>
+          <h2 class="slide-title">分享结束后，立刻推进的 3 个动作</h2>
+          <ol class="action-list reveal">
+            <li>本周内确定第一个试点场景与负责人。</li>
+            <li>两周内完成 Demo 版流程并收集反馈。</li>
+            <li>一个月内沉淀可复用模板与评估指标。</li>
+          </ol>
+          <p class="closing reveal">谢谢，下一页可直接进入自由问答。</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="statusbar">
+      <p id="statusText">1 / 8</p>
+      <div class="progress-track" aria-hidden="true">
+        <span id="progressBar" class="progress-bar"></span>
+      </div>
+      <button id="fullscreenBtn" class="btn btn-ghost">全屏演示</button>
+    </footer>
+
+    <section id="notePanel" class="note-panel" aria-live="polite" aria-label="演讲备注">
+      <h3>演讲备注</h3>
+      <p id="noteContent">按 N 键可切换显示。</p>
+    </section>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+/*
+  基于 poem-text-animator 动画预设改造为标题作用域样式，
+  仅影响 .slide-title，避免污染全局布局。
+*/
+.slide-title.animate span {
+  display: inline-block;
+}
+
+.slide-title.one span {
+  color: #1e6fe0;
+  opacity: 0;
+  transform: translate(-120px, -40px) rotate(-180deg) scale(3);
+  animation: titleRevolveScale 0.45s forwards;
+}
+
+@keyframes titleRevolveScale {
+  60% {
+    transform: translate(18px, 14px) rotate(28deg) scale(0.3);
+  }
+
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-title.two span {
+  color: #79a31a;
+  opacity: 0;
+  transform: translate(160px, -100px) scale(2);
+  animation: titleBallDrop 0.35s forwards;
+}
+
+@keyframes titleBallDrop {
+  60% {
+    transform: translate(0, 20px) rotate(-180deg) scale(0.5);
+  }
+
+  100% {
+    transform: translate(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-title.three span {
+  color: #aa0f77;
+  opacity: 0;
+  transform: translate(-280px, 0) scale(0);
+  animation: titleSideSlide 0.5s forwards;
+}
+
+@keyframes titleSideSlide {
+  60% {
+    transform: translate(20px, 0) scale(1);
+    color: #aa0f77;
+  }
+
+  80% {
+    transform: translate(20px, 0) scale(1);
+    color: #aa0f77;
+  }
+
+  99% {
+    transform: translate(0) scale(1.2);
+    color: #0bafff;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+    color: #aa0f77;
+  }
+}
+
+.slide-title.four span {
+  color: #8d6a00;
+  opacity: 0;
+  transform: translate(0, -100px) rotate(360deg) scale(0);
+  animation: titleRevolveDrop 0.35s forwards;
+}
+
+@keyframes titleRevolveDrop {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+
+  60% {
+    transform: translate(0, 20px) scale(0.8) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.slide-title.five span {
+  color: #dd3f0f;
+  opacity: 0;
+  transform: translate(0, -100px) rotate(360deg) scale(0);
+  animation: titleDropVanish 0.5s forwards;
+}
+
+@keyframes titleDropVanish {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+
+  50% {
+    transform: translate(0, 20px) scale(0.8) rotate(0deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(-90px, -90px) scale(1.5) rotate(-180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.slide-title.six span {
+  color: #d99d06;
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: titleTwister 0.45s forwards;
+}
+
+@keyframes titleTwister {
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0);
+    opacity: 1;
+  }
+}
+
+.slide-title.seven span {
+  color: #2a980a;
+  opacity: 0;
+  transform: translate(-150px, 0) scale(0.3);
+  animation: titleLeftRight 0.48s forwards;
+}
+
+@keyframes titleLeftRight {
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+    color: #2a980a;
+  }
+
+  60% {
+    color: #1d4ed8;
+  }
+
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
