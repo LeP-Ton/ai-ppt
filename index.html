@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI 分享前端 PPT 初版</title>
+    <title>提示词与 AI 协作玩法分享</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,8 +22,8 @@
 
     <header class="topbar">
       <div class="deck-meta">
-        <p class="deck-kicker">AI Sharing Deck v0.1</p>
-        <h1>让团队 30 分钟理解 AI 分享怎么做</h1>
+        <p class="deck-kicker">Prompt × Agent Sharing</p>
+        <h1>从提示词到工作流：我的 AI 协作实践</h1>
       </div>
       <div class="control-group">
         <button id="prevBtn" class="btn">上一页</button>
@@ -43,157 +43,157 @@
       </aside>
 
       <section class="slides-stage" id="slidesStage" aria-live="polite">
-        <article class="slide is-active" data-title="开场：为什么是现在" data-note="建议先讲业务压力，再讲机会窗口。">
-          <p class="slide-tag reveal">01 开场</p>
-          <h2 class="slide-title">为什么今天必须把 AI 分享做成团队共识</h2>
+        <article class="slide is-active" data-title="前言：先交代边界" data-note="先说明时间紧、准备有限，再明确希望得到建议。">
+          <p class="slide-tag reveal">01 前言</p>
+          <h2 class="slide-title">先说明三件事：时间紧、准备不充分、欢迎高手指点</h2>
           <p class="lead reveal">
-            分享目标不是“讲技术热词”，而是帮助产品、研发、运营在同一套价值语言里协作。
+            作为第一个分享者，我更希望先打开视野、抛砖引玉；如果讲得不够完整，也期待大家直接指出问题。
           </p>
           <div class="metric-grid reveal">
             <div>
-              <p class="metric-value">30 分钟</p>
-              <p class="metric-label">完成一次高质量分享</p>
+              <p class="metric-value">第 1 位</p>
+              <p class="metric-label">首位分享，目标是开启讨论</p>
             </div>
             <div>
-              <p class="metric-value">8 页</p>
-              <p class="metric-label">覆盖共识所需核心信息</p>
+              <p class="metric-value">这 周</p>
+              <p class="metric-label">准备时间较紧，先讲核心方法</p>
             </div>
             <div>
-              <p class="metric-value">3 层</p>
-              <p class="metric-label">战略、场景、执行</p>
+              <p class="metric-value">私 聊</p>
+              <p class="metric-label">游戏开发细节不展开，感兴趣可交流</p>
             </div>
           </div>
         </article>
 
-        <article class="slide" data-title="趋势：AI 价值窗口" data-note="用公司内部数据替换示例数字会更有说服力。">
-          <p class="slide-tag reveal">02 趋势</p>
-          <h2 class="slide-title">AI 价值窗口：降本、提效、增收同时发生</h2>
+        <article class="slide" data-title="提示词：全局设计" data-note="先讲自然语言模糊性，再讲上下文窗口限制与应对。">
+          <p class="slide-tag reveal">02 提示词</p>
+          <h2 class="slide-title">怎么设计提示词：全局提示词 + Agent 历史文档</h2>
           <div class="dual-column reveal">
             <div class="card">
-              <h3>外部环境变化</h3>
+              <h3>为什么要这样设计</h3>
               <ul>
-                <li>多模态模型推理成本持续下降</li>
-                <li>通用 Agent 工具链快速成熟</li>
-                <li>用户对智能体验的预期显著提高</li>
+                <li>自然语言天然有模糊地带，容易理解偏差</li>
+                <li>上下文长度有限，约束条件容易被冲掉</li>
+                <li>单轮 Prompt 难以稳定复现复杂任务</li>
               </ul>
             </div>
             <div class="card">
-              <h3>内部行动理由</h3>
+              <h3>我的实践做法</h3>
               <ul>
-                <li>流程中重复劳动占比高，自动化收益明确</li>
-                <li>已有数据资产，但复用效率偏低</li>
-                <li>需要统一方法，避免零散试错</li>
+                <li>全局提示词统一目标、边界、输出风格</li>
+                <li>Agent 历史文档沉淀决策与约束记忆</li>
+                <li>每次任务只补充差量信息，降低漂移</li>
               </ul>
             </div>
           </div>
         </article>
 
-        <article class="slide" data-title="能力：AI 分享内容地图" data-note="这里可以结合团队角色做内容取舍。">
-          <p class="slide-tag reveal">03 能力</p>
-          <h2 class="slide-title">一场 AI 分享，建议覆盖这 4 个能力象限</h2>
+        <article class="slide" data-title="Prompt 池：多思维模式" data-note="可按角色拆，也可按思维方式拆；这里重点讲思维模式。">
+          <p class="slide-tag reveal">03 Prompt 池</p>
+          <h2 class="slide-title">把 AI 拆成“思维模式”，形成可切换的 Prompt Skills</h2>
           <div class="quad-grid reveal">
             <div class="quad-item">
-              <h3>模型认知</h3>
-              <p>模型能做什么、不能做什么，边界要先讲清。</p>
+              <h3>发散思维</h3>
+              <p>`divergent-thinking`：适合开放问题，探索平行方案。</p>
             </div>
             <div class="quad-item">
-              <h3>Prompt 设计</h3>
-              <p>输入结构化，输出才能稳定可复用。</p>
+              <h3>逻辑分析</h3>
+              <p>`logical-analysis`：适合单路径推理，追求精确结论。</p>
             </div>
             <div class="quad-item">
-              <h3>业务落地</h3>
-              <p>把“酷炫演示”转换为“可衡量结果”。</p>
+              <h3>批判思维</h3>
+              <p>`critical-review`：用于找问题、纠错、突破思维定式。</p>
             </div>
             <div class="quad-item">
-              <h3>风险治理</h3>
-              <p>质量、合规、数据安全必须同步设计。</p>
+              <h3>系统思维</h3>
+              <p>关注全局依赖与反馈回路，适合复杂协同任务。</p>
             </div>
           </div>
         </article>
 
-        <article class="slide" data-title="框架：一页讲清选题" data-note="优先展示 1 个高频场景的切入方式。">
-          <p class="slide-tag reveal">04 选题</p>
-          <h2 class="slide-title">用“问题-方案-收益”结构快速定义一个分享主题</h2>
+        <article class="slide" data-title="可能性：Multi-Agent" data-note="这里强调“人格分裂”是可控协同，不是随机发挥。">
+          <p class="slide-tag reveal">04 可能性</p>
+          <h2 class="slide-title">当 Prompt 池可编排后：从单助手到 Multi-Agent 协同</h2>
           <div class="timeline reveal">
             <div class="timeline-item">
-              <p class="timeline-title">问题定义</p>
-              <p>目标用户是谁？当前损失在哪里？</p>
+              <p class="timeline-title">拆解方式</p>
+              <p>可按思维模式、职业角色或业务板块拆分 Agent。</p>
             </div>
             <div class="timeline-item">
-              <p class="timeline-title">方案设计</p>
-              <p>模型、工具、流程如何组合？</p>
+              <p class="timeline-title">并行产出</p>
+              <p>同一问题让多个 Agent 同时给出候选方案。</p>
             </div>
             <div class="timeline-item">
-              <p class="timeline-title">收益验证</p>
-              <p>上线前后用哪些指标对比？</p>
+              <p class="timeline-title">互评收敛</p>
+              <p>用批判型 Agent 做审核，淘汰弱方案并补漏。</p>
             </div>
             <div class="timeline-item">
-              <p class="timeline-title">推广路径</p>
-              <p>如何复制到第二个、第三个场景？</p>
+              <p class="timeline-title">沉淀复用</p>
+              <p>把有效 Prompt 回收进池子，形成持续进化体系。</p>
             </div>
           </div>
         </article>
 
-        <article class="slide" data-title="Demo：现场演示结构" data-note="演示环节建议控制在 8 分钟内。">
-          <p class="slide-tag reveal">05 Demo</p>
-          <h2 class="slide-title">一次高可用 Demo，建议包含 3 段式叙事</h2>
+        <article class="slide" data-title="冰山之下：广度与深度" data-note="后半部分偏抛砖引玉，重点展示可延展空间。">
+          <p class="slide-tag reveal">05 冰山</p>
+          <h2 class="slide-title">冰山之下：多线程（广度）与自动化（深度）</h2>
           <div class="dual-column reveal">
             <div class="card card-strong">
-              <h3>Before</h3>
-              <p>展示旧流程：手工、重复、延迟高。</p>
+              <h3>多线程（广度）</h3>
+              <p>结合 Git Worktree 与脑洞技能，并行开发多个版本，像在平行宇宙里同时试错。</p>
             </div>
             <div class="card card-strong">
-              <h3>After</h3>
-              <p>展示新流程：AI 辅助 + 人工复核。</p>
+              <h3>自动化（深度）</h3>
+              <p>把分析、改码、测试、评分串成 AI Workflow，中途尽量减少人工介入。</p>
             </div>
           </div>
           <div class="callout reveal">
-            <p>关键不是“模型有多强”，而是“团队今天就能用起来”。</p>
+            <p>关键词：平行宇宙、永动机、自博弈系统、低配版强化学习。</p>
           </div>
         </article>
 
-        <article class="slide" data-title="执行：90 天落地节奏" data-note="可以把甘特图替换成你们真实排期。">
-          <p class="slide-tag reveal">06 执行</p>
-          <h2 class="slide-title">建议执行节奏：先试点，再标准化，再规模化</h2>
+        <article class="slide" data-title="自动化案例：从脚本到自进化" data-note="从身边问题切入，比抽象概念更容易共鸣。">
+          <p class="slide-tag reveal">06 自动化</p>
+          <h2 class="slide-title">从日常脚本到代码自进化：自动化可以做什么？</h2>
           <div class="phase-grid reveal">
             <div class="phase-card">
-              <p class="phase-name">第 1-3 周</p>
-              <p class="phase-title">场景试点</p>
-              <p>确定单一高价值场景，完成闭环验证。</p>
+              <p class="phase-name">日常效率</p>
+              <p class="phase-title">自动抢会议室</p>
+              <p>把高频、重复、争抢型流程脚本化，减少无效消耗。</p>
             </div>
             <div class="phase-card">
-              <p class="phase-name">第 4-8 周</p>
-              <p class="phase-title">流程标准化</p>
-              <p>固化提示词模板与评估清单。</p>
+              <p class="phase-name">团队协作</p>
+              <p class="phase-title">吃饭推荐脚本</p>
+              <p>自动推荐每日选项，降低“吃什么”决策成本。</p>
             </div>
             <div class="phase-card">
-              <p class="phase-name">第 9-12 周</p>
-              <p class="phase-title">规模复制</p>
-              <p>跨团队复制并建立运营指标看板。</p>
+              <p class="phase-name">工程演化</p>
+              <p class="phase-title">Code Evolution System</p>
+              <p>AI 分析→自动改码→自动测试→评分→下一轮，用于持续优化 caseMind 性能。</p>
             </div>
           </div>
         </article>
 
-        <article class="slide" data-title="风险：上线前检查" data-note="建议把合规同学加入评审流程。">
-          <p class="slide-tag reveal">07 风险</p>
-          <h2 class="slide-title">上线前至少完成这 4 类检查</h2>
+        <article class="slide" data-title="启发：人和 AI 的关系" data-note="这一页先给观点，再解释为什么。">
+          <p class="slide-tag reveal">07 启发</p>
+          <h2 class="slide-title">我的判断：AI 不会减少任务，只会放大能力与欲望</h2>
           <div class="checklist reveal">
-            <p><span>质量稳定性</span> 输出一致性、幻觉率、失败回退。</p>
-            <p><span>数据安全</span> 脱敏策略、权限边界、日志审计。</p>
-            <p><span>合规要求</span> 版权、隐私、行业监管要求。</p>
-            <p><span>组织协同</span> 责任分工、人工兜底、反馈机制。</p>
+            <p><span>生产力悖论</span> AI 能力膨胀常常伴随目标膨胀，一天可能要做更多事。</p>
+            <p><span>职业定位</span> 面对 AI 时代，更像“一人成军”，要懂前端、后端、设计与调度。</p>
+            <p><span>实践成本</span> 思考能力逐渐接近动手能力，想法可以更快落地成原型。</p>
+            <p><span>协作模式</span> 从前后端分离回到端到端协作，技术形态仍在高速演进。</p>
           </div>
         </article>
 
-        <article class="slide" data-title="收尾：行动清单" data-note="结尾需要明确 owner 和截止时间。">
-          <p class="slide-tag reveal">08 行动</p>
-          <h2 class="slide-title">分享结束后，立刻推进的 3 个动作</h2>
+        <article class="slide" data-title="收尾：附录与交流" data-note="留好仓库地址与扩展话题，引导会后交流。">
+          <p class="slide-tag reveal">08 收尾</p>
+          <h2 class="slide-title">抛砖引玉：欢迎补充更多思维模式与自动化想法</h2>
           <ol class="action-list reveal">
-            <li>本周内确定第一个试点场景与负责人。</li>
-            <li>两周内完成 Demo 版流程并收集反馈。</li>
-            <li>一个月内沉淀可复用模板与评估指标。</li>
+            <li>附录一：`ai-ppt` 本次分享仓库地址（现场补充具体链接）。</li>
+            <li>附录二：标题动画库 `poem-text-animator` 引用地址（现场补充）。</li>
+            <li>会后交流：GameX / MusicX / BookX 等概念原型，感兴趣可私聊。</li>
           </ol>
-          <p class="closing reveal">谢谢，下一页可直接进入自由问答。</p>
+          <p class="closing reveal">谢谢，期待大家的建议，也欢迎继续共创。</p>
         </article>
       </section>
     </main>

@@ -17,3 +17,8 @@
 - 已接入 `poem-text-animator`（来源：`/Users/didi/Documents/program/poem`）到 `src/libs/poem-text-animator`。
 - 标题动画采用逐字拆分方案：在切页时重建 `.slide-title` 的字符节点并触发预设动画。
 - 为避免样式污染，动画 CSS 已作用域限定为 `.slide-title`，不会覆盖全局 `body` 与通用元素样式。
+
+### 2026-03-13 15:27 分享文案重构认知
+- 在不改变布局和样式类名的前提下，已完成 `index.html` 8 页文案的整体重写，主题从“通用 AI 分享模板”切换为“提示词 + Skills + 自动化工作流实践”。
+- 页级元信息（`data-title`、`data-note`）已与新叙事同步更新，目录导航与演讲备注继续可用。
+- 当前内容结构包含：前言边界说明、全局提示词方法、Prompt 池思维模式、Multi-Agent 可能性、冰山之下（多线程/自动化）、自动化案例、个人启发、附录与交流。
